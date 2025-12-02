@@ -1,0 +1,840 @@
+@charset "UTF-8";
+
+/* RESET GERAL — remove margens/paddings padrão e define comportamento das caixas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* CONFIGURAÇÕES DO BODY — define fundo e cor básica do texto */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #2B2D42;
+}
+
+/* HEADER — layout em flex, espaçamento e gradiente de fundo */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, #D62828, #E63946);
+}
+
+/* Logo redonda adaptada ao container */
+.logo img {
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* MENU — itens em linha com espaço entre eles */
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+/* LINKS DO MENU — estilização dos textos */
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFF;
+  transition: 0.3s;
+}
+
+/* Cor mais clara ao passar o mouse */
+nav a:hover {
+  color: #FFECEC;
+}
+
+/* Toggle do menu (checkbox escondido para mobile) */
+#menu-toggle {
+  display: none;
+}
+
+/* Estrutura do botão hambúrguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* Barras do botão hambúrguer */
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+nav {
+  transition: 0.3s ease;
+}
+
+/* SEÇÃO INTRODUÇÃO */
+.intro {
+  padding: 60px 5%;
+}
+
+/* PERFIL — centraliza imagem e textos */
+.perfil {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Título principal destacado em vermelho */
+.info h1 {
+  font-size: 2.4rem;
+  color: #D62828;
+}
+
+/* Foto do perfil com borda arredondada e sombra */
+.foto-perfil {
+  width: 200px;
+  height: 200px;
+  border-radius: 30%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.12);
+}
+
+.info h3 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Texto descritivo com largura limitada para melhor leitura */
+.desc {
+  max-width: 400px;
+  line-height: 1.4rem;
+}
+
+/* SOBRE DESENVOLVEDOR — box lateral com fundo suave e sombra */
+.sobre-dev {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  background: #ecb6b696;
+  padding: 20px;
+  width: 30%;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* Texto do sobre com boa legibilidade */
+.sobre-dev p {
+  font-size: large;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.sobre-dev h3 {
+  margin-bottom: 10px;
+  color: #D62828;
+}
+
+/* PROJETOS */
+.projects {
+  padding: 40px 5%;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #D62828;
+}
+
+/* Grid flexível dos cards */
+.grid-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Estilo geral dos cards */
+.card {
+  flex: 1 1 230px;
+  max-width: 280px;
+  background: #FFF;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+/* Efeito de leve subida */
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Miniatura dos projetos */
+.thumb {
+  height: 120px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Links internos dos cards */
+.card a {
+  color: #cf7272c5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  color: #ff4d4d;
+  text-decoration: underline;
+}
+
+/* CONTATO */
+.contact {
+  padding: 40px 5%;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #D62828;
+}
+
+/* Formulário responsivo */
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  background: #FFF;
+}
+
+/* Botões gerais */
+button {
+  padding: 14px;
+  border: none;
+  background: #D62828;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #BB1E1E;
+}
+
+/* RODAPÉ */
+footer {
+  background: #1D3557;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+}
+
+/* Ícones sociais centralizados */
+.redes-footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.redes-footer a {
+  color: #F1F1F1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.redes-footer a:hover {
+  color: #E63946;
+
+  /* Menu aparece como bloco lateral */
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #D62828;
+    width: 180px;
+    padding: 20px;
+    border-radius: 0 0 0 12px;
+    display: none;
+  }
+
+  /* Exibir menu quando toggle for marcado */
+  #menu-toggle:checked + .hamburger + nav {
+    display: block;
+  }
+
+  /* Itens em coluna */
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Mostrar botão hambúrguer */
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  /* Sobre ocupa tela no mobile */
+  .sobre-dev {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+
+  .perfil {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* ARTIGOS E IMAGENS GERAIS */
+article {
+  width: 100%;
+  max-width: 100%;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Textos centralizados */
+h2, h3, p {
+  text-align: center;
+}
+
+/* PÁGINA SOBRE */
+.pagina-sobre {
+  padding: 100px 5%;
+}
+
+.sobre-container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.sobre-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #D62828;
+}
+
+.sobre-container p {
+  text-align: justify;
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+  line-height: 1.6rem;
+  color: #333;
+}
+
+/* QUEM PODE DOAR */
+.quem-pode-doar {
+  padding: 50px 5%;
+  background: #f8f8f8;
+}
+
+.quem-pode-doar-container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.quem-pode-doar-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #D62828;
+  font-size: 2rem;
+}
+
+.quem-pode-doar-container h2 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  color: #2B2D42;
+  font-size: 1.4rem;
+}
+
+.quem-pode-doar-container h4 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #D62828;
+}
+
+.quem-pode-doar-container p {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+  line-height: 1.6rem;
+  color: #333;
+}
+
+/* Listas gerais da página */
+.condições-para-doar,
+.quem-não-pode-doar,
+.lista-pre-exame,
+.sub-lista {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  line-height: 1.5rem;
+}
+
+.sub-lista {
+  margin-left: 30px;
+}
+
+/* Marcadores personalizados */
+.condições-para-doar li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+  position: relative;
+}
+
+.condições-para-doar li::before {
+  content: "•";
+  color: #D62828;
+  font-weight: bold;
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Lista de impedimentos */
+.quem-não-pode-doar {
+  padding-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.quem-não-pode-doar li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.quem-não-pode-doar li::before {
+  content: "–";
+  color: #555;
+  margin-right: 6px;
+}
+
+/* PRÉ-EXAME – FORMULÁRIO */
+.pre-exame {
+  padding: 100px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.pre-exame-container {
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.pre-exame-container h1 {
+  text-align: center;
+  color: #D62828;
+}
+
+.pre-exame-container h2 {
+  color: #D62828;
+  margin-bottom: 10px;
+}
+
+.pre-exame-container h4 {
+  color: #333;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.pre-exame-container p {
+  line-height: 1.6rem;
+  color: #333;
+}
+
+/* Estilização básica dos inputs */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cores personalizadas para radio e checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #D62828;
+}
+
+/* Botão do formulário */
+button[type="submit"] {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  background: #D62828;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 200px;
+  align-self: center;
+}
+
+button[type="submit"]:hover {
+  background: #a31e1e;
+}
+
+/* Lista com indentação */
+.sub-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 20px;
+}
+
+
+/* CADASTRO DE DOADOR */
+.cadastro {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.cadastro-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cadastro-container h1 {
+  color: #D62828;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.cadastro-container h2 {
+  color: #2B2D42;
+  margin: 15px 0 5px 0;
+}
+
+.cadastro-container label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.cadastro-container input[type="text"],
+.cadastro-container input[type="date"],
+.cadastro-container input[type="email"],
+.cadastro-container input[type="tel"],
+.cadastro-container input[type="number"],
+.cadastro-container select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.sexo-options {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.cadastro-container button[type="submit"] {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  background: #D62828;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.cadastro-container button[type="submit"]:hover {
+  background: #a71d1d;
+}
+
+/* LOGIN */
+.login {
+  display: flex;
+  justify-content: center;
+  padding: 100px 5%;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #D62828;
+}
+
+.login-container p {
+  margin-bottom: 15px;
+  color: #444;
+  text-align: center;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-container label {
+  font-weight: bold;
+}
+
+.login-container input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.login-container button {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  background: #D62828;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 200px;
+  align-self: center;
+}
+
+.login-container button:hover {
+  background: #b02020;
+}
+
+.links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.links a {
+  color: #D62828;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* AGENDAMENTO */
+.agendamento-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 100px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-agendamento {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-agendamento input,
+.form-agendamento select {
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  border: none;
+  background: #D62828;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #B71C1C;
+}
+
+/* PÁGINA DE ESTOQUE DE SANGUE */
+.estoque-container {
+    max-width: 900px;
+    margin: 80px auto;
+    text-align: center;
+    padding: 100px;
+}
+
+.estoque-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+.estoque-desc {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+/* Grid de tipos sanguíneos */
+.estoque-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+/* Cards dos tipos sanguíneos */
+.tipo {
+    padding: 25px;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.tipo h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Paleta para cada tipo */
+.sangue-a-pos { background: #e63946; }
+.sangue-b-pos { background: #d90429; }
+.sangue-ab-pos { background: #6a040f; }
+.sangue-o-pos { background: #9d0208; }
+.sangue-a- { background: #780000; }
+.sangue-b- { background: #b80c09; }
+.sangue-ab- { background: #8d0801; }
+.sangue-o- { background: #8d0801; }
+
+/* Texto do nível de estoque */
+.nivel {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width:1024px){
+  .sobre-dev{width:40%;min-width:200px}
+  .info h1{font-size:1.9rem}
+}
+
+@media (max-width:850px){
+  .hamburger{display:flex}
+  nav{
+    position:absolute;
+    top:58px;
+    right:0;
+    background:#D62828;
+    width:220px;
+    padding:18px;
+    border-radius:0 0 0 12px;
+    display:none;
+  }
+  #menu-toggle:checked + .hamburger + nav{display:block}
+  nav ul{flex-direction:column;gap:14px}
+
+  .perfil{flex-direction:column}
+  .sobre-dev{width:100%;margin-top:18px}
+  .foto-perfil{width:160px;height:160px}
+  .card{max-width:100%}
+}
+
+@media (max-width:600px){
+  .intro,.projects,.contact{padding:22px 4%}
+  .estoque-container{padding:20px 4%}
+  .agendamento-container,.pre-exame-container{padding:18px}
+  .agendamento-container{margin:20px}
+  .card{flex:1 1 100%}
+  .info h1{font-size:1.6rem}
+  .sobre-container,.quem-pode-doar-container{padding:18px}
+}
+
+/* final */
+img{max-width:100%;height:auto;display:block}
+.container{width:100%}
+
+/* ===== FIM ===== */

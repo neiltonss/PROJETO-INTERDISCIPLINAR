@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-Exame</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>        
+        <div class="logo">
+                <img src="Doação.jpeg" alt="Logo de doação">
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Pré-exame.html">Pré-exame</a></li>
+                <li><a href="Cadastro.html">Cadastro</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+<main class="pre-exame">
+    <section class="pre-exame-container">
+        <h1>🩸 Pré-Exame</h1>
+        <p>
+            Antes de realizar sua doação, precisamos que você responda algumas perguntas importantes sobre sua saúde e histórico médico. Suas respostas são confidenciais e ajudam a garantir a segurança de todos.
+        </p>
+        <form>
+            <h2>Questionário de Saúde</h2>
+            <label>1. Você está se sentindo bem e saudável hoje?</label>
+            <div>
+                <input type="radio" name="saude" value="sim"> Sim
+                <input type="radio" name="saude" value="nao"> Não
+            </div>
+            <label>2. Está tomando algum medicamento atualmente?</label>
+            <div>
+                <input type="radio" name="medicamento" value="sim"> Sim
+                <input type="radio" name="medicamento" value="nao"> Não
+            </div>
+            <label>Se sim, qual?</label>
+            <input type="text" name="medicamento-detalhe">
+            <label>3. Já teve alguma das seguintes doenças? (Marque as que se aplicam)</label>
+            <div class="sub-lista">
+                <input type="checkbox" name="doenca" value="hepatite"> Hepatite B ou C
+                <input type="checkbox" name="doenca" value="hiv"> HIV/AIDS
+                <input type="checkbox" name="doenca" value="sifilis"> Sífilis
+                <input type="checkbox" name="doenca" value="chagas"> Doença de Chagas
+                <input type="checkbox" name="doenca" value="malaria"> Malária
+                <input type="checkbox" name="doenca" value="nenhuma"> Nenhuma das anteriores
+            </div>
+            <label>4. Já fez alguma cirurgia nos últimos 6 meses?</label>
+            <div>
+                <input type="radio" name="cirurgia" value="sim"> Sim
+                <input type="radio" name="cirurgia" value="nao"> Não
+            </div>
+            <label>Se sim, qual?</label>
+            <input type="text" name="cirurgia-detalhe">
+
+            <label>5. Já teve febre, gripe ou resfriado nos últimos 7 dias?</label>
+            <div>
+                <input type="radio" name="febre" value="sim"> Sim
+                <input type="radio" name="febre" value="nao"> Não
+            </div>
+            <h2>Histórico Sexual</h2>
+            <label>6. Teve relações sexuais com múltiplos parceiros nos últimos 12 meses?</label>
+            <div>
+                <input type="radio" name="multiplo-parceiro" value="sim"> Sim
+                <input type="radio" name="multiplo-parceiro" value="nao"> Não
+            </div>
+            <label>7. Teve relação sexual sem uso de preservativo nos últimos 12 meses?</label>
+            <div>
+                <input type="radio" name="sem-preservativo" value="sim"> Sim
+                <input type="radio" name="sem-preservativo" value="nao"> Não
+            </div>
+            <h2>Viagens</h2>
+            <label>8. Viajou para fora do país nos últimos 12 meses?</label>
+            <div>
+                <input type="radio" name="viagem" value="sim"> Sim
+                <input type="radio" name="viagem" value="nao"> Não
+            </div>
+            <label>Se sim, para onde?</label>
+            <input type="text" name="viagem-detalhe">
+            <label>9. Visitou áreas com surto de doenças como febre amarela, dengue ou malária?</label>
+            <div>
+                <input type="radio" name="surto" value="sim"> Sim
+                <input type="radio" name="surto" value="nao"> Não
+            </div>
+            <h2>Confirmação</h2>
+            <label>10. Você confirma que todas as informações fornecidas são verdadeiras?</label>
+            <div>
+                <input type="radio" name="confirmacao" value="sim"> Sim
+                <input type="radio" name="confirmacao" value="nao"> Não
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</main>
+<footer>
+    © 2025 — Neilton Soares - Matheus Henrique - João Lucas da Silva
+    <div class="redes-footer">
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Facebook</a>
+    </div>
+</footer>
+</body>
+</html>
